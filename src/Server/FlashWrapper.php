@@ -197,9 +197,9 @@ final class FlashWrapper implements IWrapper
 	 *
 	 * @return bool
 	 */
-	private function validatePorts(string $port): bool
+	private function validatePorts(int $port): bool
 	{
-		return (bool) preg_match('/^(\*|(\d+[,-]?)*\d+)$/', $port);
+		return (bool) preg_match('/^(\*|(\d+[,-]?)*\d+)$/', (string) $port);
 	}
 
 }
